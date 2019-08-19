@@ -23,6 +23,5 @@ public class SemaphoreWorker {
             Thread t = new Thread(task);
             t.start();
         }
-
     }
 }

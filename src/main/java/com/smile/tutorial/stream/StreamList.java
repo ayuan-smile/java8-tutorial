@@ -19,5 +19,7 @@ public class StreamList {
 		
 		streamSupplier.get().findFirst().ifPresent(Log::console);
 		streamSupplier.get().findFirst().ifPresent(Log::file);
+
+
 	}
 }

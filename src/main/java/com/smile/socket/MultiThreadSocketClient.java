@@ -5,7 +5,12 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
-
+/**
+ *
+ * socket客户端
+ * @author: ayuan
+ * @create: 2013-8-13-13:41
+ */
 public class MultiThreadSocketClient {
     private Socket cl;
     private BufferedReader in;

@@ -1,4 +1,4 @@
-package com.smile.thread;
+package com.smile.thread.volatiles;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -14,8 +14,7 @@ public class VolatileInt extends Thread {
             count++;
             atomicCount.incrementAndGet();
         }
-        System.out.println(count);
-        System.out.println(atomicCount);
+        System.out.println(String.format("count=%s,atomicCount=%s",count,atomicCount));
     }
 
     public static void main(String[] args) throws InterruptedException {
@@ -27,7 +26,7 @@ public class VolatileInt extends Thread {
 		t2.start();
 		Thread.sleep(1*1000);
 		*/
-        VolatileInt[] volatileIncs = new VolatileInt[100];
+        VolatileInt[] volatileIncs = new VolatileInt[10];
         for (int i = 0; i < 10; i++) {
             volatileIncs[i] = new VolatileInt();
         }

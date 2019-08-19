@@ -25,6 +25,8 @@ public class MapTest {
         list.add(0,"12");
         //list.remove(1);
         list.forEach((s)->System.out.println(s));
+        Object[] arrays = list.toArray();
+        System.out.println(list.toArray(new String[3]));
 
         System.out.println(3 >> 1);
     }

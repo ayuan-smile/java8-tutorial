@@ -22,6 +22,7 @@ public class MultiThreadSocketServer extends ServerSocket{
             while(true){
                 System.out.println("等待连接ing....");
                 Socket socket = accept();
+                // 为每一个socket都建立一个线程
                 new SevrerThread(socket);
                 System.out.println("生成的socket的hash值："+socket.hashCode());
             }
@@ -44,13 +45,15 @@ public class MultiThreadSocketServer extends ServerSocket{
         public void run() {
             try{
                 String line = "";
-                if(in!=null)
+                if(in!=null){
+                    // 阻塞读取一行
                     line = in.readLine();
+                }
                 while(line!=null&&!line.equals("bye")){
                     String msg = createMessage(line);
                     out.println(msg);
                     if(in!=null)
-                        //line 在in中没有内容时得到null值
+                        // line 在in中没有内容时得到null值
                         line = in.readLine();
                 }
                 out.println("see you!");
@@ -67,6 +70,6 @@ public class MultiThreadSocketServer extends ServerSocket{
         }
     }
     public static void main(String[] args) throws IOException {
-        new SocketServer();
+        new MultiThreadSocketServer();
     }
 }

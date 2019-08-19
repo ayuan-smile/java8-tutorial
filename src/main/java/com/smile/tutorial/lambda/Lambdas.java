@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.function.Predicate;
 
 import com.smile.tutorial.func.Log;
+import com.smile.tutorial.func.LogTI;
 
 public class Lambdas {
 	
@@ -29,7 +30,7 @@ public class Lambdas {
 		System.out.println("\t");
 		apps.forEach(Log::console);
 		System.out.println("\t");
-		//apps.forEach(LogTI::console);
+		//apps.forEach(LogTI::log);
 		
 		/*
 		appList.sort((a1,a2)->a1.getWeight()-a2.getWeight());

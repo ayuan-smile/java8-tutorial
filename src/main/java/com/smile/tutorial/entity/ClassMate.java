@@ -4,6 +4,14 @@ public class ClassMate {
     public String id;
     public String name;
 
+    public ClassMate() {
+    }
+
+    public ClassMate(String id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
     public String getId() {
         return id;
     }
@@ -18,5 +26,13 @@ public class ClassMate {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "ClassMate{" +
+            "id='" + id + '\'' +
+            ", name='" + name + '\'' +
+            '}';
     }
 }

@@ -1,11 +1,14 @@
-package com.smile.thread;
+package com.smile.thread.volatiles;
 
 import java.util.concurrent.TimeUnit;
 
 
 public class Volatile implements Runnable {
-    //private static volatile boolean flag = true;
-    private static boolean flag = true;
+    /**
+     * 此处测试加不加volatile没有区别
+     */
+    private volatile boolean flag = true;
+    //private static boolean flag = true;
     private static int count = 1;
 
     @Override
