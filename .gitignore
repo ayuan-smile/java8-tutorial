@@ -1,4 +1,6 @@
 target/
+target
+/target
 !**/src/main/**
 !**/src/test/**
 
